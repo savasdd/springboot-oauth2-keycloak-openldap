@@ -1,0 +1,140 @@
+# LDIF Export for dc=mycompany,dc=com
+# Server: openldap (openldap)
+# Search Scope: sub
+# Search Filter: (objectClass=*)
+# Total Entries: 10
+# Password: 123
+
+version: 1
+
+## Entry 1: dc=mycompany,dc=com
+#dn: dc=mycompany,dc=com
+#dc: mycompany
+#o: "MyCompany Inc."
+#objectclass: top
+#objectclass: dcObject
+#objectclass: organization
+
+## Entry 2: cn=admin,dc=mycompany,dc=com
+#dn: cn=admin,dc=mycompany,dc=com
+#cn: admin
+#description: LDAP administrator
+#objectclass: simpleSecurityObject
+#objectclass: organizationalRole
+#userpassword: {SSHA}iGmwNRRDcGxmafPklI1kcKivNq8cCb4j
+
+# Entry 3: ou=groups,dc=mycompany,dc=com
+dn: ou=groups,dc=mycompany,dc=com
+objectclass: organizationalUnit
+objectclass: top
+ou: groups
+
+# Entry 4: cn=admin,ou=groups,dc=mycompany,dc=com
+dn: cn=admin,ou=groups,dc=mycompany,dc=com
+cn: admin
+gidnumber: 501
+memberuid: 1003
+objectclass: posixGroup
+objectclass: top
+
+# Entry 5: cn=developers,ou=groups,dc=mycompany,dc=com
+dn: cn=developers,ou=groups,dc=mycompany,dc=com
+cn: developers
+gidnumber: 500
+memberuid: 1000
+memberuid: 1001
+memberuid: 1002
+memberuid: 1004
+memberuid: 1005
+objectclass: posixGroup
+objectclass: top
+
+# Entry 6: ou=users,dc=mycompany,dc=com
+dn: ou=users,dc=mycompany,dc=com
+objectclass: organizationalUnit
+objectclass: top
+ou: users
+
+# Entry 7: cn=Savas Dede,ou=users,dc=mycompany,dc=com
+dn: cn=Bill Gates,ou=users,dc=mycompany,dc=com
+cn: Savas Dede
+gidnumber: 500
+givenname: savas.dede
+homedirectory: /home/users/savasdd
+objectclass: inetOrgPerson
+objectclass: posixAccount
+objectclass: top
+sn: Savas
+uid: savasdd
+uidnumber: 1000
+userpassword: {MD5}ICy5YqxZB1uWSwcVLSNLcA==
+
+# Entry 8: cn=Mustafa Dede,ou=users,dc=mycompany,dc=com
+dn: cn=Ivan Franchin,ou=users,dc=mycompany,dc=com
+cn: Mustafa Dede
+gidnumber: 501
+givenname: mustafa.dede
+homedirectory: /home/users/mustafadd
+objectclass: inetOrgPerson
+objectclass: posixAccount
+objectclass: top
+sn: Mustafa
+uid: mustafadd
+uidnumber: 1003
+userpassword: {MD5}ICy5YqxZB1uWSwcVLSNLcA==
+
+# Entry 9: cn=Merve Karaca,ou=users,dc=mycompany,dc=com
+dn: cn=Mark Cuban,ou=users,dc=mycompany,dc=com
+cn: Merve Karaca
+gidnumber: 500
+givenname: merve.karaca
+homedirectory: /home/users/mervek
+objectclass: inetOrgPerson
+objectclass: posixAccount
+objectclass: top
+sn: Merve
+uid: mervek
+uidnumber: 1002
+userpassword: {MD5}ICy5YqxZB1uWSwcVLSNLcA==
+
+# Entry 10: cn=Oya Sus,ou=users,dc=mycompany,dc=com
+dn: cn=Steve Jobs,ou=users,dc=mycompany,dc=com
+cn: Oya Sus
+gidnumber: 500
+givenname: oya.sus
+homedirectory: /home/users/oyas
+objectclass: inetOrgPerson
+objectclass: posixAccount
+objectclass: top
+sn: Oya
+uid: oyas
+uidnumber: 1001
+userpassword: {MD5}ICy5YqxZB1uWSwcVLSNLcA==
+
+# Entry 11: cn=Baris Olmez,ou=users,dc=mycompany,dc=com
+dn: cn=Steve Jobs,ou=users,dc=mycompany,dc=com
+cn: Baris Olmez
+gidnumber: 500
+givenname: baris.olmez
+homedirectory: /home/users/bariso
+objectclass: inetOrgPerson
+objectclass: posixAccount
+objectclass: top
+sn: Baris
+uid: bariso
+uidnumber: 1004
+userpassword: {MD5}ICy5YqxZB1uWSwcVLSNLcA==
+
+# Entry 12: cn=Serpilay Sef,ou=users,dc=mycompany,dc=com
+dn: cn=Steve Jobs,ou=users,dc=mycompany,dc=com
+cn: Serpilay Sef
+gidnumber: 500
+givenname: serpilay.sef
+homedirectory: /home/users/serpilays
+objectclass: inetOrgPerson
+objectclass: posixAccount
+objectclass: top
+sn: Serpilay
+uid: serpilays
+uidnumber: 1005
+userpassword: {MD5}ICy5YqxZB1uWSwcVLSNLcA==
