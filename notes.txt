@@ -1,0 +1,24 @@
+-----------LDAP:
+phpldapadmin ldap
+Access https://localhost:6443
+
+import file edilir.
+Login DN: cn=admin,dc=mycompany,dc=com
+Password: admin
+
+----------LDAP Integration
+look directory to ldap
+
+----------Postman:
+POST: http://localhost:8043/auth/realms/backend-realm/protocol/openid-connect/token
+
+Auth2.0
+Bearer
+Grant Type: password
+access token url: http://localhost:8043/auth/realms/backend-realm/protocol/openid-connect/token
+client id: api-backend
+secret: LZjWnwd3zIAiUThJCT41FGA7W62lSj5H
+
+
+----------OpenApi:
+http://localhost:8085/swagger-ui/index.html
